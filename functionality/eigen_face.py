@@ -7,6 +7,10 @@ def eigen_face():
     avg_matrix = __calculate_avg_matrix(images_matrix=images)
     subtracted_avg_matrix = __subtracted_avg_matrix(image_matrix=images, avg_matrix=avg_matrix)
     covariance_matrix = __compute_covariance_matrix(subtracted_avg_matrix)
+    six_largest_eigen_values, six_largest_eigen_vectors = calculate_K_largest_eigs(symmetric_matrix=covariance_matrix,
+                                                                                   K=6)
+
+    print(six_largest_eigen_values, six_largest_eigen_vectors)
 
 
 def __calculate_avg_matrix(images_matrix):
