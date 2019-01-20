@@ -1,4 +1,4 @@
-from utils.Utils import load_images_from_folder
+from utils.Utils import load_images_from_folder, calculate_K_largest_eigs
 import numpy
 
 
@@ -7,6 +7,7 @@ def eigen_face():
     avg_matrix = __calculate_avg_matrix(images_matrix=images)
     subtracted_avg_matrix = __subtracted_avg_matrix(image_matrix=images, avg_matrix=avg_matrix)
     covariance_matrix = __compute_covariance_matrix(subtracted_avg_matrix)
+
 
 def __calculate_avg_matrix(images_matrix):
     avg_matrix = numpy.asarray(images_matrix[0].copy())
@@ -29,5 +30,3 @@ def __compute_covariance_matrix(subtracted_avg_matrix):
         covariance_matrix += numpy.matmul(image, image_transpose)
 
     return covariance_matrix
-
-
