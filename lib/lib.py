@@ -1,1 +1,1 @@
-DATASET_LOCATION = "../dataset"
+DATASET_LOCATION = "./dataset"
