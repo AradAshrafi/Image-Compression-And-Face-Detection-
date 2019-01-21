@@ -6,7 +6,7 @@ from lib.lib import DATASET_LOCATION, IMAGE_TO_COMPRESS_LOCATION
 
 
 # load all images from folder path in gray scaled form
-def load_images_from_folder():
+def load_dataset_images():
     images = []
     for filename in os.listdir(DATASET_LOCATION):
         path_to_file = os.path.join(DATASET_LOCATION, filename)
@@ -56,8 +56,6 @@ def __build_sigma_matrix(sorted_eigenvalues, matrix):
     sigma_values[numpy.isnan(sigma_values)] = 0  # replacing negative values with 0
     # Sigma is 243 *320
     sigma = numpy.zeros((len(matrix), len(matrix[0])), dtype=numpy.float64)
-    # print(type(sorted_eigenvectors), len(sorted_eigenvectors), len(sorted_eigenvectors[0]), len(matrix), len(matrix[0]))
-
     # building sigma matrix
     for i in range(len(sigma)):
         sigma[i][i] = sigma_values[i]
