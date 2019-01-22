@@ -34,7 +34,7 @@ def __build_U_matrix(matrix, sigma, V):
     # building U matrix
     # AV is 243 *320 , we need first 243 * 243 for U matrix.and they must be divided by sigma either
     AV = numpy.matmul(matrix, V)
-    u_raw_version = AV[:, :243]
+    u_raw_version = AV[:, :len(sigma)]
     u_raw_version_transpose = numpy.transpose(u_raw_version)
     for i in range(len(u_raw_version_transpose)):
         u_raw_version_transpose[i] /= sigma[i][i]

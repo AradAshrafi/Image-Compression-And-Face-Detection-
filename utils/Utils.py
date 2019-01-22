@@ -1,6 +1,7 @@
 from PIL import Image
 import os
 import numpy
+import matplotlib.pyplot as plt
 from scipy.linalg import eigh as largest_eigh
 from lib.lib import DATASET_LOCATION, IMAGE_TO_COMPRESS_LOCATION
 
@@ -53,3 +54,18 @@ def calculate_avg_subtraction(image_matrix, avg_matrix):
     subtracted_avg_matrix = image_matrix.copy()
     subtracted_avg_matrix -= avg_matrix
     return subtracted_avg_matrix
+
+
+# calculate summation of matrix elements
+def __calculate_matrix_elements_summation(matrix):
+    summation = 0
+    for row in matrix:
+        for element in row:
+            summation += element
+    return summation
+
+
+# plot compression values with K values
+def draw_compression_plot(k_values, compression_rates):
+    plt.plot(k_values, compression_rates)
+    plt.show()
