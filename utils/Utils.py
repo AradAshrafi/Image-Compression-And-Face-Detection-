@@ -57,12 +57,20 @@ def calculate_avg_subtraction(image_matrix, avg_matrix):
 
 
 # calculate summation of matrix elements
-def __calculate_matrix_elements_summation(matrix):
+def calculate_matrix_elements_summation(matrix):
     summation = 0
     for row in matrix:
         for element in row:
             summation += element
     return summation
+
+
+def convert_k_diagonal_elements_to_zero(start_index, matrix):
+    # clone original matrix,because in each iteration we change different diagonal values in it and we want original one
+    compressed_matrix = matrix.copy()
+    for i in range(len(matrix) - start_index):
+        compressed_matrix[start_index + i][start_index + i] = 0
+    return compressed_matrix
 
 
 # plot compression values with K values
