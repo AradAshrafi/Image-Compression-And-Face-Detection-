@@ -1,4 +1,5 @@
-from utils.Utils import load_image, SVD_decomposition
+from utils.Utils import load_image
+from utils.SVD import SVD_decomposition
 import sys
 import numpy
 import scipy.sparse
@@ -15,7 +16,7 @@ def SVD_compression():
         sigma[242 - i][242 - i] = 0
 
     compressed_image = numpy.matmul(numpy.matmul(U, sigma), numpy.transpose(V))
-    cv2.imwrite("outputs/testt.jpg", compressed_image)
+    # cv2.imwrite("eigenface outputs/testt.jpg", compressed_image)
     # result = Image.fromarray(compressed_image)
     # result.save('out.jpg')
     # sigma = scipy.sparse.lil_matrix(sigma).todense()
