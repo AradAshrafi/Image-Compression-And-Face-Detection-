@@ -10,5 +10,5 @@ if __name__ == '__main__':
     # a += a
     # print(a)
     # SVD_compression()
-    DCT_compression()
-    # SVD_face_recognition()
+    # DCT_compression()
+    SVD_face_recognition()

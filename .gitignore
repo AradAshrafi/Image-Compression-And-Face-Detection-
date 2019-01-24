@@ -1,3 +1,4 @@
 dataset
 *.xml
 eigenface outputs
+compression outputs
