@@ -1,8 +1,13 @@
 functionality of this program :
 
 1 - Eigenface for face detection :
-    building 6 top eigen faces
+  - [x] building 6 top eigen faces
 2 - SVD Compression : 
-    compress images using SVD with different compression rate,and compare them    
-3 - DCT Compression
+  - [x] compress images using SVD with different compression rate,and compare them    
+3 - DCT Compression :
+  - [x] compress images using SVD with different compression rate,and compare them   
 4 - Facial Recognition with SVD
+  - [x] extracting EigenImages
+  - [x] Draw r_order approximation error graph
+  - [x] construct r dimensional Feature Vector
+  - [ ] Draw accuracy chart using Linear regression to train
