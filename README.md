@@ -7,7 +7,7 @@ functionality of this program :
   - [x] compress images using SVD with different compression rate,and compare them    
   
 3 - DCT Compression :
-  - [x] compress images using SVD with different compression rate,and compare them  
+  - [x] compress images using DCT with different compression rate,and compare them  
   
 4 - Facial Recognition with SVD
   - [x] extracting EigenImages
